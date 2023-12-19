@@ -1,23 +1,34 @@
 {
   "name": "prettify-postgresql",
   "displayName": "Prettify PostgreSQL",
-  "description": "Prettifies/beautifies plain text as PostgreSQL to make it readable",
+  "description": "Prettifies/beautifies plain text as PostgreSQL to make it readable. Useful when viewing queries.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Formatters"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:plaintext"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "prettify-postgresql.helloWorld",
-        "title": "Hello World"
+        "command": "prettify-postgresql.prettify",
+        "title": "Prettify PostgreSQL"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "prettify-postgresql.prettify",
+          "when": "editorLangId == plaintext || editorLangId === sql",
+          "group": "prettify-postgresql"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -26,6 +37,13 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
+  },
+  "publisher": "almliden",
+  "author": "almliden",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almliden/prettify-postgresql"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
