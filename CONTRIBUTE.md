@@ -8,7 +8,7 @@ Create a PR, or deploy your own version of the extension.
 
 ## How to build
 
-- Build `npm run build`
+- Build `npm run compile`
 - Package `vsce package`
 - Install as `*.vsix`-extension.
 
