@@ -45,6 +45,7 @@
     "type": "git",
     "url": "https://github.com/almliden/prettify-postgresql"
   },
+  "icon": "images/postgre_5968277_128px.png",
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.6",
