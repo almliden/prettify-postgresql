@@ -2,7 +2,7 @@
   "name": "prettify-postgresql",
   "displayName": "Prettify PostgreSQL",
   "description": "Prettifies/beautifies plain text as PostgreSQL to make it readable. Useful when viewing queries.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
